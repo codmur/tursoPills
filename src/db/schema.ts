@@ -6,3 +6,9 @@ export const usersTable = sqliteTable("users_table", {
   email: text().notNull().unique(),
 });
 
+export const pillsTable = sqliteTable("pills_table", {
+  id: int().primaryKey({ autoIncrement: true }),
+  name: text().notNull(),
+  unids: int().notNull(),
+  date: text().notNull(),
+});

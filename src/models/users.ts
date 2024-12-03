@@ -1,5 +1,5 @@
 import { drizzle } from "drizzle-orm/libsql/node"
-import { usersTable } from "../db/schema";
+import { pillsTable, usersTable } from "../db/schema";
 import 'dotenv/config';
 
 const db = drizzle({
@@ -18,10 +18,15 @@ export class UserModel {
         const user: typeof usersTable.$inferInsert = {
             ...input
         };
-
         return await db.insert(usersTable).values(user).returning();
     }
 
+    static async createPill({ input }: any) {
+        const pills: typeof pillsTable.$inferInsert = {
+            ...input
+        };
 
+        return await db.insert(pillsTable).values(pills).returning();
+    }
 
 }

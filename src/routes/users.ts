@@ -7,4 +7,9 @@ export const userRouter = Router()
 userRouter.get('/', UserController.getAll)
 userRouter.post('/', UserController.create)
 
+userRouter.post('/pills', UserController.createPills)
+
+
+
+
 

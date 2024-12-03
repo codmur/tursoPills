@@ -13,4 +13,14 @@ export class UserController {
     }
 
 
+    static async createPills(req: Request, res: Response) {
+        const newPill = await UserModel.createPill({ input: {
+            ...req.body,
+            date: `${new Date().toISOString().split('T')[0]}`
+
+        } })
+        res.status(201).json(newPill)
+    }
+
+
 }

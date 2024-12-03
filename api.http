@@ -1,8 +1,8 @@
-POST http://localhost:1234/
+### Otra
+POST http://localhost:1234/pills
 Content-Type: application/json
 
 {
-  "age": "72",
-  "email": "Navarro@yopmail.com",
-  "name": "Paco"
+  "unids": 1,
+  "name": "Paracetamol"
 }
