@@ -1,0 +1,8 @@
+POST http://localhost:1234/
+Content-Type: application/json
+
+{
+  "age": "72",
+  "email": "Navarro@yopmail.com",
+  "name": "Paco"
+}
